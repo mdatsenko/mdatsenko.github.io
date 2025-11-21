@@ -191,8 +191,38 @@
             padding-top: 60px;
         }
 
+        .hero-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
         .hero-content {
+            flex: 1;
             text-align: left;
+        }
+
+        .hero-photo {
+            /* flex: 0 0 280px; */
+            width: 280px;
+            height: 280px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 10px;
+
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+        }
+
+        body.light-mode .hero-photo {
+            background: #fff;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            object-fit: cover;
         }
 
         .hero p.intro {
@@ -444,6 +474,29 @@
                 display: block;
             }
 
+            .hero-wrapper {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .kero-content {
+                text-align: center;
+            }
+
+            .hero-photo {
+                width: 200px;
+                height: 200px;
+                /* max-width: 280px; */
+                aspect-ratio: 1;
+                margin-top: 13px;
+                padding: 5px;
+            }
+            /* .hero-photo img{ */
+            /*     padding-bottom: 0; */
+            /*     margin: 0; */
+            /* } */
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -481,23 +534,29 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <p class="intro">Hi, my name is</p>
-            <h1>Mariia Datsenko.</h1>
-            <h2>I model the world through Math & Code.</h2>
-            <p class="desc">
-                A passionate mathematics student from Kyiv, specializing in interdisciplinary applications of analytics in physics and computer science. 
-                Seeking an internship in Applied Mathematics or AI.
-            </p>
-            <a href="#contact" class="btn">Get in Touch</a>
-            <a href="https://mdatsenko.github.io/cv.pdf" class="btn">My CV</a>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <p class="intro">Hi, my name is</p>
+                    <h1>Mariia Datsenko.</h1>
+                    <h2>I model the world through Math & Code.</h2>
+                    <p class="desc">
+                        A passionate mathematics student from Kyiv, specializing in interdisciplinary applications of analytics in physics and computer science. 
+                        Seeking an internship in Applied Mathematics or AI.
+                    </p>
+                    <a href="#contact" class="btn">Get in Touch</a>
+                    <a href="https://mdatsenko.github.io/cv.pdf" class="btn">My CV</a>
+                </div>
+                <div class="hero-photo">
+                    <img src="profile.jpeg" alt="Portrait of Mariia Datsenko">
+                </div>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="container">
+        <!-- About Section -->
+        <section id="about" class="container">
         <h2 class="section-title">01. About Me</h2>
         <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 50px; align-items: start;">
             <div>
@@ -689,6 +748,8 @@
             <a href="mailto:mariia.datsenko@universite-paris-saclay.fr" class="btn">Say Hello</a>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer>
